@@ -1,0 +1,40 @@
+<manifest package="engine.games.luisg.engine"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <!-- Required for fopen utilities for file loading of external storage(not currently used) -->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:hasCode="true">
+
+        <!-- Home screen app name is android:label above-->
+
+        <!--<activity android:name="android.app.NativeActivity"-->
+        <activity android:name=".Launcher"
+                  android:label="Engine"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:screenOrientation="portrait">
+            <!--<meta-data android:name="android.android.app.lib_name"-->
+            <meta-data android:name="android.app.lib_name"
+                       android:value="engine_main" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Ad Overlay Activity -->
+
+
+    </application>
+
+</manifest>
